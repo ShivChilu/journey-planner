@@ -101,6 +101,7 @@ const JourneyPlanner = () => {
           </p>
         </div>
 
+        {/* Enhanced Results Section with Visualization */}
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Input Section */}
           <Card className="shadow-lg border-0 shadow-slate-200/50">
@@ -150,7 +151,7 @@ const JourneyPlanner = () => {
 
                 <div>
                   <Label htmlFor="preference" className="text-sm font-medium text-slate-700">
-                    Route Preference
+                    Route Optimization
                   </Label>
                   <Select value={preference} onValueChange={setPreference}>
                     <SelectTrigger className="mt-1">
@@ -160,19 +161,19 @@ const JourneyPlanner = () => {
                       <SelectItem value="time">
                         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-2" />
-                          Fastest Route (Time)
+                          Fastest Route (Minimize Time)
                         </div>
                       </SelectItem>
                       <SelectItem value="fare">
                         <div className="flex items-center">
                           <IndianRupee className="w-4 h-4 mr-2" />
-                          Cheapest Route (Fare)
+                          Cheapest Route (Minimize Fare)
                         </div>
                       </SelectItem>
                       <SelectItem value="transfers">
                         <div className="flex items-center">
                           <Route className="w-4 h-4 mr-2" />
-                          Minimum Transfers
+                          Fewest Transfers (Minimize Changes)
                         </div>
                       </SelectItem>
                     </SelectContent>
@@ -189,12 +190,12 @@ const JourneyPlanner = () => {
                   {isCalculating ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2" />
-                      Calculating...
+                      Running Dijkstra's Algorithm...
                     </>
                   ) : (
                     <>
                       <Zap className="w-4 h-4 mr-2" />
-                      Find Route
+                      Calculate Optimal Route
                     </>
                   )}
                 </Button>
@@ -206,17 +207,24 @@ const JourneyPlanner = () => {
               {/* Algorithm Status */}
               <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-slate-700">Algorithm Status</span>
-                  <Badge variant={isCalculating ? "default" : "secondary"}>
-                    {isCalculating ? "Running" : "Ready"}
+                  <span className="text-sm font-medium text-slate-700">Dijkstra's Algorithm Status</span>
+                  <Badge variant={isCalculating ? "default" : "secondary"} className={isCalculating ? "bg-blue-500" : ""}>
+                    {isCalculating ? "Processing" : "Ready"}
                   </Badge>
                 </div>
                 <p className="text-xs text-slate-600">
                   {isCalculating 
-                    ? "Dijkstra's algorithm is processing your route request..." 
-                    : "Enter source and destination to start pathfinding calculation."
+                    ? "Computing shortest path using priority queue and graph traversal..." 
+                    : "Ready to find optimal route between selected stations using graph algorithms."
                   }
                 </p>
+                {isCalculating && (
+                  <div className="mt-2">
+                    <div className="w-full bg-slate-200 rounded-full h-1.5">
+                      <div className="bg-blue-500 h-1.5 rounded-full animate-pulse" style={{width: '70%'}}></div>
+                    </div>
+                  </div>
+                )}
               </div>
             </CardContent>
           </Card>
