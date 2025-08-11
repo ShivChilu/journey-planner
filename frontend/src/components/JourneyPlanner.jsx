@@ -349,43 +349,77 @@ const JourneyPlanner = () => {
           </Card>
         </div>
 
-        {/* Quick Examples */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center text-slate-900 mb-8">Popular Routes</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+        {/* Technical Implementation Details */}
+        <div className="mt-20 bg-gradient-to-br from-slate-50 to-blue-50 p-12 rounded-2xl border border-slate-200">
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="mb-4 text-slate-600 border-slate-300">
+              Algorithm Implementation
+            </Badge>
+            <h3 className="text-3xl font-bold text-slate-900 mb-4">
+              Dijkstra's Algorithm Features
+            </h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              This implementation demonstrates advanced computer science concepts and optimization techniques
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { from: "MG Road", to: "Botanical Garden", time: "25 min", fare: "₹35", color: "blue" },
-              { from: "Rajouri Garden", to: "Connaught Place", time: "18 min", fare: "₹25", color: "green" },
-              { from: "Dwarka", to: "Noida City Centre", time: "55 min", fare: "₹60", color: "purple" }
-            ].map((route, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 cursor-pointer border-0 shadow-md">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge variant="outline" className={`text-${route.color}-600 border-${route.color}-200`}>
-                      Popular
-                    </Badge>
-                    <Users className="w-4 h-4 text-slate-400" />
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center text-slate-700">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-2" />
-                      <span className="font-medium">{route.from}</span>
-                    </div>
-                    <div className="flex items-center text-slate-400 ml-4">
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                    <div className="flex items-center text-slate-700">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mr-2" />
-                      <span className="font-medium">{route.to}</span>
-                    </div>
-                  </div>
-                  <div className="flex justify-between mt-4 pt-4 border-t border-slate-100">
-                    <span className="text-sm text-slate-600">{route.time}</span>
-                    <span className="text-sm font-medium text-slate-700">{route.fare}</span>
-                  </div>
-                </CardContent>
+              {
+                title: "Graph Representation",
+                description: "Adjacency list using STL containers for O(1) station lookup",
+                icon: "🔗",
+                complexity: "Space: O(V + E)"
+              },
+              {
+                title: "Priority Queue",
+                description: "Min-heap implementation for efficient vertex selection",
+                icon: "⚡",
+                complexity: "Time: O(log V)"
+              },
+              {
+                title: "Path Reconstruction",
+                description: "Parent tracking for complete route details and optimization",
+                icon: "🛤️",
+                complexity: "Space: O(V)"
+              },
+              {
+                title: "Multiple Criteria",
+                description: "Optimize for time, cost, or transfers using weighted edges",
+                icon: "🎯",
+                complexity: "Flexible weights"
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="text-center p-6 hover:shadow-lg transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                <div className="text-3xl mb-4">{feature.icon}</div>
+                <h4 className="font-semibold text-slate-800 mb-2">{feature.title}</h4>
+                <p className="text-sm text-slate-600 mb-3">{feature.description}</p>
+                <Badge variant="secondary" className="text-xs">
+                  {feature.complexity}
+                </Badge>
               </Card>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="inline-block bg-white p-6 rounded-xl border border-slate-200 shadow-md">
+              <div className="flex items-center justify-center gap-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">O((V + E) log V)</div>
+                  <div className="text-sm text-slate-600">Time Complexity</div>
+                </div>
+                <div className="h-8 w-px bg-slate-300"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">O(V)</div>
+                  <div className="text-sm text-slate-600">Space Complexity</div>
+                </div>
+                <div className="h-8 w-px bg-slate-300"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">100%</div>
+                  <div className="text-sm text-slate-600">Optimal Solution</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
