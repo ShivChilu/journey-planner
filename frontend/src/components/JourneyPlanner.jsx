@@ -81,6 +81,7 @@ const JourneyPlanner = () => {
       case 'time': return 'bg-blue-500';
       case 'fare': return 'bg-green-500';
       case 'transfers': return 'bg-purple-500';
+      case 'combined': return 'bg-gradient-to-r from-blue-500 to-green-500';
       default: return 'bg-gray-500';
     }
   };
