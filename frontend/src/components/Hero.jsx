@@ -39,9 +39,9 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="border-slate-600 text-slate-300 hover:text-white hover:bg-slate-700 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
-              onClick={() => document.getElementById('algorithm')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.open('https://github.com/your-username/metro-journey-planner', '_blank')}
             >
-              View C++ Code
+              View on GitHub
               <Code className="ml-2 w-5 h-5" />
             </Button>
           </div>
