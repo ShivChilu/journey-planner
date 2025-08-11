@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
-import AlgorithmExplanation from "./components/AlgorithmExplanation";
 import JourneyPlanner from "./components/JourneyPlanner";
+import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       <Hero />
       <JourneyPlanner />
-      <AlgorithmExplanation />
+      <Footer />
     </div>
   );
 };
