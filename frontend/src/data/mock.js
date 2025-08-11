@@ -125,6 +125,7 @@ export const metroLines = {
   }
 };
 
+// Realistic Delhi Metro fare and route data
 export const mockRouteData = {
   "MG Road": {
     "Botanical Garden": {
@@ -137,22 +138,73 @@ export const mockRouteData = {
                "Delhi Gate", "ITO", "Mandi House", "Pragati Maidan", "Akshardham",
                "Mayur Vihar-I", "Mayur Vihar Extension", "New Ashok Nagar", "Noida Sector 15",
                "Noida Sector 16", "Noida Sector 18", "Botanical Garden"],
-        distance: 45.2,
-        fare: 55,
-        estimatedTime: 68,
+        distance: 51.2,
+        fare: 60,
+        estimatedTime: 78,
         transfers: 1,
         lines: ["Yellow Line", "Blue Line"]
       },
       fare: {
-        path: ["MG Road", "Sikandarpur", "Hauz Khas", "Green Park", "AIIMS", "INA",
-               "Jor Bagh", "Lok Kalyan Marg", "Udyog Bhawan", "Central Secretariat",
+        path: ["MG Road", "IFFCO Chowk", "HUDA City Centre"],
+        distance: 6.2,
+        fare: 30,
+        estimatedTime: 15,
+        transfers: 0,
+        lines: ["Yellow Line"]
+      },
+      transfers: {
+        path: ["MG Road", "Sikandarpur", "Guru Dronacharya", "Arjan Garh", "Ghitorni",
+               "Sultanpur", "Chhatarpur", "Qutab Minar", "Saket", "Malviya Nagar",
+               "Hauz Khas", "Green Park", "AIIMS", "INA", "Central Secretariat",
                "Mandi House", "Barakhamba Road", "Rajiv Chowk", "New Delhi", "Chawri Bazar",
                "Lal Quila", "Jama Masjid", "Delhi Gate", "ITO", "Mandi House", "Pragati Maidan",
                "Akshardham", "Mayur Vihar-I", "Mayur Vihar Extension", "New Ashok Nagar",
                "Noida Sector 15", "Noida Sector 16", "Noida Sector 18", "Botanical Garden"],
-        distance: 42.8,
-        fare: 50,
+        distance: 48.7,
+        fare: 55,
         estimatedTime: 72,
+        transfers: 1,
+        lines: ["Yellow Line", "Blue Line"]
+      },
+      combined: {
+        path: ["MG Road", "Sikandarpur", "Guru Dronacharya", "Arjan Garh", "Ghitorni",
+               "Sultanpur", "Chhatarpur", "Qutab Minar", "Saket", "Malviya Nagar",
+               "Hauz Khas", "Green Park", "AIIMS", "INA", "Central Secretariat",
+               "Mandi House", "Barakhamba Road", "Rajiv Chowk", "New Delhi", "Chawri Bazar",
+               "Lal Quila", "Jama Masjid", "Delhi Gate", "ITO", "Mandi House", "Pragati Maidan",
+               "Akshardham", "Mayur Vihar-I", "Mayur Vihar Extension", "New Ashok Nagar",
+               "Noida Sector 15", "Noida Sector 16", "Noida Sector 18", "Botanical Garden"],
+        distance: 49.1,
+        fare: 55,
+        estimatedTime: 70,
+        transfers: 1,
+        lines: ["Yellow Line", "Blue Line"]
+      }
+    },
+    "Rajouri Garden": {
+      time: {
+        path: ["MG Road", "Sikandarpur", "Guru Dronacharya", "Arjan Garh", "Ghitorni",
+               "Sultanpur", "Chhatarpur", "Qutab Minar", "Saket", "Malviya Nagar",
+               "Hauz Khas", "Green Park", "AIIMS", "INA", "Jor Bagh", "Lok Kalyan Marg",
+               "Udyog Bhawan", "Central Secretariat", "Rajiv Chowk", "Ramakrishna Ashram Marg",
+               "Jhandewalan", "Karol Bagh", "Rajendra Place", "Patel Nagar", "Shadipur",
+               "Kirti Nagar", "Moti Nagar", "Ramesh Nagar", "Rajouri Garden"],
+        distance: 38.5,
+        fare: 45,
+        estimatedTime: 58,
+        transfers: 1,
+        lines: ["Yellow Line", "Blue Line"]
+      },
+      fare: {
+        path: ["MG Road", "Sikandarpur", "Guru Dronacharya", "Arjan Garh", "Ghitorni",
+               "Sultanpur", "Chhatarpur", "Qutab Minar", "Saket", "Malviya Nagar",
+               "Hauz Khas", "Green Park", "AIIMS", "INA", "Jor Bagh", "Lok Kalyan Marg",
+               "Udyog Bhawan", "Central Secretariat", "Rajiv Chowk", "Ramakrishna Ashram Marg",
+               "Jhandewalan", "Karol Bagh", "Rajendra Place", "Patel Nagar", "Shadipur",
+               "Kirti Nagar", "Moti Nagar", "Ramesh Nagar", "Rajouri Garden"],
+        distance: 38.5,
+        fare: 45,
+        estimatedTime: 58,
         transfers: 1,
         lines: ["Yellow Line", "Blue Line"]
       },
@@ -160,19 +212,158 @@ export const mockRouteData = {
         path: ["MG Road", "Sikandarpur", "Guru Dronacharya", "Arjan Garh", "Ghitorni",
                "Sultanpur", "Chhatarpur", "Qutab Minar", "Saket", "Malviya Nagar",
                "Hauz Khas", "Green Park", "AIIMS", "INA", "Jor Bagh", "Lok Kalyan Marg",
-               "Udyog Bhawan", "Central Secretariat", "Mandi House", "Barakhamba Road",
-               "Rajiv Chowk", "New Delhi", "Chawri Bazar", "Lal Quila", "Jama Masjid",
-               "Delhi Gate", "ITO", "Mandi House", "Pragati Maidan", "Akshardham",
-               "Mayur Vihar-I", "Mayur Vihar Extension", "New Ashok Nagar", "Noida Sector 15",
-               "Noida Sector 16", "Noida Sector 18", "Botanical Garden"],
-        distance: 45.2,
-        fare: 55,
-        estimatedTime: 68,
+               "Udyog Bhawan", "Central Secretariat", "Rajiv Chowk", "Ramakrishna Ashram Marg",
+               "Jhandewalan", "Karol Bagh", "Rajendra Place", "Patel Nagar", "Shadipur",
+               "Kirti Nagar", "Moti Nagar", "Ramesh Nagar", "Rajouri Garden"],
+        distance: 38.5,
+        fare: 45,
+        estimatedTime: 58,
+        transfers: 1,
+        lines: ["Yellow Line", "Blue Line"]
+      },
+      combined: {
+        path: ["MG Road", "Sikandarpur", "Guru Dronacharya", "Arjan Garh", "Ghitorni",
+               "Sultanpur", "Chhatarpur", "Qutab Minar", "Saket", "Malviya Nagar",
+               "Hauz Khas", "Green Park", "AIIMS", "INA", "Jor Bagh", "Lok Kalyan Marg",
+               "Udyog Bhawan", "Central Secretariat", "Rajiv Chowk", "Ramakrishna Ashram Marg",
+               "Jhandewalan", "Karol Bagh", "Rajendra Place", "Patel Nagar", "Shadipur",
+               "Kirti Nagar", "Moti Nagar", "Ramesh Nagar", "Rajouri Garden"],
+        distance: 38.5,
+        fare: 45,
+        estimatedTime: 56,
         transfers: 1,
         lines: ["Yellow Line", "Blue Line"]
       }
     }
+  },
+  "Rajouri Garden": {
+    "Connaught Place": {
+      time: {
+        path: ["Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar", "Shadipur",
+               "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan", "New Delhi",
+               "Rajiv Chowk"],
+        distance: 15.8,
+        fare: 30,
+        estimatedTime: 28,
+        transfers: 0,
+        lines: ["Blue Line"]
+      },
+      fare: {
+        path: ["Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar", "Shadipur",
+               "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan", "New Delhi",
+               "Rajiv Chowk"],
+        distance: 15.8,
+        fare: 30,
+        estimatedTime: 28,
+        transfers: 0,
+        lines: ["Blue Line"]
+      },
+      transfers: {
+        path: ["Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar", "Shadipur",
+               "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan", "New Delhi",
+               "Rajiv Chowk"],
+        distance: 15.8,
+        fare: 30,
+        estimatedTime: 28,
+        transfers: 0,
+        lines: ["Blue Line"]
+      },
+      combined: {
+        path: ["Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar", "Shadipur",
+               "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan", "New Delhi",
+               "Rajiv Chowk"],
+        distance: 15.8,
+        fare: 30,
+        estimatedTime: 26,
+        transfers: 0,
+        lines: ["Blue Line"]
+      }
+    }
+  },
+  "Dwarka": {
+    "Noida City Centre": {
+      time: {
+        path: ["Dwarka", "Dwarka Mor", "Nawada", "Uttam Nagar West", "Uttam Nagar East",
+               "Janakpuri West", "Janakpuri East", "Tilak Nagar", "Subhash Nagar",
+               "Tagore Garden", "Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar",
+               "Shadipur", "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan",
+               "New Delhi", "Chawri Bazar", "Lal Quila", "Jama Masjid", "Delhi Gate",
+               "ITO", "Mandi House", "Barakhamba Road", "Rajiv Chowk", "Ramakrishna Ashram Marg",
+               "Pragati Maidan", "Akshardham", "Mayur Vihar-I", "Mayur Vihar Extension",
+               "New Ashok Nagar", "Noida Sector 15", "Noida Sector 16", "Noida Sector 18",
+               "Botanical Garden", "Golf Course", "Noida City Centre"],
+        distance: 68.5,
+        fare: 70,
+        estimatedTime: 95,
+        transfers: 0,
+        lines: ["Blue Line"]
+      },
+      fare: {
+        path: ["Dwarka", "Dwarka Mor", "Nawada", "Uttam Nagar West", "Uttam Nagar East",
+               "Janakpuri West", "Janakpuri East", "Tilak Nagar", "Subhash Nagar",
+               "Tagore Garden", "Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar",
+               "Shadipur", "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan",
+               "New Delhi", "Chawri Bazar", "Lal Quila", "Jama Masjid", "Delhi Gate",
+               "ITO", "Mandi House", "Barakhamba Road", "Rajiv Chowk", "Ramakrishna Ashram Marg",
+               "Pragati Maidan", "Akshardham", "Mayur Vihar-I", "Mayur Vihar Extension",
+               "New Ashok Nagar", "Noida Sector 15", "Noida Sector 16", "Noida Sector 18",
+               "Botanical Garden", "Golf Course", "Noida City Centre"],
+        distance: 68.5,
+        fare: 70,
+        estimatedTime: 95,
+        transfers: 0,
+        lines: ["Blue Line"]
+      },
+      transfers: {
+        path: ["Dwarka", "Dwarka Mor", "Nawada", "Uttam Nagar West", "Uttam Nagar East",
+               "Janakpuri West", "Janakpuri East", "Tilak Nagar", "Subhash Nagar",
+               "Tagore Garden", "Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar",
+               "Shadipur", "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan",
+               "New Delhi", "Chawri Bazar", "Lal Quila", "Jama Masjid", "Delhi Gate",
+               "ITO", "Mandi House", "Barakhamba Road", "Rajiv Chowk", "Ramakrishna Ashram Marg",
+               "Pragati Maidan", "Akshardham", "Mayur Vihar-I", "Mayur Vihar Extension",
+               "New Ashok Nagar", "Noida Sector 15", "Noida Sector 16", "Noida Sector 18",
+               "Botanical Garden", "Golf Course", "Noida City Centre"],
+        distance: 68.5,
+        fare: 70,
+        estimatedTime: 95,
+        transfers: 0,
+        lines: ["Blue Line"]
+      },
+      combined: {
+        path: ["Dwarka", "Dwarka Mor", "Nawada", "Uttam Nagar West", "Uttam Nagar East",
+               "Janakpuri West", "Janakpuri East", "Tilak Nagar", "Subhash Nagar",
+               "Tagore Garden", "Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar",
+               "Shadipur", "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan",
+               "New Delhi", "Chawri Bazar", "Lal Quila", "Jama Masjid", "Delhi Gate",
+               "ITO", "Mandi House", "Barakhamba Road", "Rajiv Chowk", "Ramakrishna Ashram Marg",
+               "Pragati Maidan", "Akshardham", "Mayur Vihar-I", "Mayur Vihar Extension",
+               "New Ashok Nagar", "Noida Sector 15", "Noida Sector 16", "Noida Sector 18",
+               "Botanical Garden", "Golf Course", "Noida City Centre"],
+        distance: 68.5,
+        fare: 70,
+        estimatedTime: 92,
+        transfers: 0,
+        lines: ["Blue Line"]
+      }
+    }
   }
+};
+
+// Delhi Metro fare calculation (realistic rates)
+export const calculateFare = (distance) => {
+  if (distance <= 2) return 10;
+  if (distance <= 5) return 15;
+  if (distance <= 12) return 20;
+  if (distance <= 21) return 30;
+  if (distance <= 32) return 40;
+  if (distance <= 50) return 50;
+  return 60;
+};
+
+// Travel time calculation (2 minutes per station + 1 minute per transfer)
+export const calculateTime = (stations, transfers) => {
+  return (stations * 2) + (transfers * 3) + 5; // 5 minutes buffer
 };
 
 export const cppAlgorithmCode = `#include <iostream>
