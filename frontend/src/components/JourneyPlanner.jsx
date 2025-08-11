@@ -282,7 +282,9 @@ const JourneyPlanner = () => {
                     <Badge className={`${getPreferenceColor(preference)} text-white px-4 py-2`}>
                       {getPreferenceIcon(preference)}
                       <span className="ml-2 capitalize">
-                        Optimized for {preference === 'transfers' ? 'minimum transfers' : preference}
+                        {preference === 'transfers' ? 'Optimized for minimum transfers' : 
+                         preference === 'combined' ? 'Optimized for best overall route' :
+                         `Optimized for ${preference}`}
                       </span>
                     </Badge>
                   </div>
