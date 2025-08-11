@@ -1,45 +1,84 @@
-// Mock data for Delhi Metro Journey Planner
+// Realistic Delhi Metro Journey Planner Data
 
 export const delhiMetroStations = [
-  "Shahdara", "Mansarovar Park", "Jhilmil", "Dilshad Garden", "Jhilmil Industrial Area",
-  "Mansarovar Park", "Shahdara", "Welcome", "Seelampur", "Shastri Park",
-  "Kashmere Gate", "Tis Hazari", "Pulbangash", "Pratap Nagar", "Shastri Nagar",
-  "Inderlok", "Kanhaiya Nagar", "Keshav Puram", "Netaji Subhash Place", "Kohat Enclave",
-  "Pitam Pura", "Rohini East", "Rohini West", "Rithala",
-  "Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar", "Shadipur",
-  "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan", "New Delhi",
-  "Chawri Bazar", "Lal Quila", "Jama Masjid", "Delhi Gate", "ITO",
-  "Mandi House", "Janpath", "Central Secretariat", "Khan Market", "JLN Stadium",
-  "Jangpura", "Lajpat Nagar", "Moolchand", "Kailash Colony", "Nehru Place",
-  "Kalkaji Mandir", "Govind Puri", "Harkesh Nagar Okhla", "Jasola Apollo",
-  "Sarita Vihar", "Mohan Estate", "Tughlakabad Station", "Badarpur Border",
-  "Sarai Kale Khan", "Hazrat Nizamuddin", "Humayun's Tomb", "JLN Stadium",
+  // Red Line
+  "Rithala", "Rohini West", "Rohini East", "Pitam Pura", "Kohat Enclave", 
+  "Netaji Subhash Place", "Keshav Puram", "Kanhaiya Nagar", "Inderlok", 
+  "Shastri Nagar", "Pratap Nagar", "Pulbangash", "Tis Hazari", "Kashmere Gate",
+  "Shastri Park", "Seelampur", "Welcome", "Shahdara", "Mansarovar Park", 
+  "Jhilmil", "Dilshad Garden",
+  
+  // Yellow Line
+  "Jahangirpuri", "Adarsh Nagar", "Azadpur", "Model Town", "GTB Nagar", 
+  "Vishwa Vidyalaya", "Vidhan Sabha", "Civil Lines", "Chandni Chowk", 
+  "Chawri Bazar", "New Delhi", "Rajiv Chowk", "Patel Chowk",
+  "Central Secretariat", "Udyog Bhawan", "Lok Kalyan Marg", "Jor Bagh", 
+  "INA", "AIIMS", "Green Park", "Hauz Khas", "Malviya Nagar", "Saket",
+  "Qutab Minar", "Chhatarpur", "Sultanpur", "Ghitorni", "Arjan Garh",
+  "Guru Dronacharya", "Sikandarpur", "MG Road", "IFFCO Chowk", "HUDA City Centre",
+  
+  // Blue Line
+  "Dwarka Sector 21", "Dwarka Sector 8", "Dwarka Sector 9", "Dwarka Sector 10",
+  "Dwarka Sector 11", "Dwarka Sector 12", "Dwarka Sector 13", "Dwarka Sector 14",
+  "Dwarka", "Dwarka Mor", "Nawada", "Uttam Nagar West", "Uttam Nagar East",
+  "Janakpuri West", "Janakpuri East", "Tilak Nagar", "Subhash Nagar",
+  "Tagore Garden", "Rajouri Garden", "Ramesh Nagar", "Moti Nagar", "Kirti Nagar",
+  "Shadipur", "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan",
+  "Lal Quila", "Jama Masjid", "Delhi Gate", "ITO", "Mandi House", 
+  "Barakhamba Road", "Ramakrishna Ashram Marg",
+  
+  // Green Line
+  "Brigadier Hoshiar Singh", "Bahadurgarh City", "Shakurpur", "Nangloi",
+  "Nangloi Railway Station", "Rajdhani Park", "Mundka", "Mundka Industrial Area",
+  
+  // Blue Line Extension (Noida)
   "Pragati Maidan", "Akshardham", "Mayur Vihar-I", "Mayur Vihar Extension",
   "New Ashok Nagar", "Noida Sector 15", "Noida Sector 16", "Noida Sector 18",
-  "Botanical Garden", "Golf Course", "Noida City Centre"
+  "Botanical Garden", "Golf Course", "Noida City Centre",
+  
+  // Violet Line
+  "Escorts Mujesar", "Raja Nahar Singh", "Ballabhgarh", "Mohan Estate",
+  "Tughlakabad Station", "Sarita Vihar", "Jasola Apollo", "Okhla NSIC",
+  "Kalkaji Mandir", "Nehru Place", "Kailash Colony", "Moolchand", "Lajpat Nagar",
+  "Jangpura", "Khan Market", "JLN Stadium", "Central Secretariat",
+  
+  // Pink Line
+  "Majlis Park", "Azadpur", "Shalimar Bagh", "Netaji Subhash Place", 
+  "Shakurpur", "Punjabi Bagh West", "ESI-Basaidarapur", "Rajouri Garden",
+  "Mayapuri", "Naraina Vihar", "Delhi Cantonment", "Durgabai Deshmukh South Campus",
+  "Sir Vishveshwaraiah Moti Bagh", "Bhikaji Cama Place", "Sarojini Nagar",
+  "Dilli Haat-INA", "South Extension", "Lajpat Nagar", "Vinobapuri", 
+  "Ashram", "Sarai Kale Khan", "Hazrat Nizamuddin", "Mayur Vihar Pocket-1"
 ];
 
 export const metroLines = {
   "Red Line": {
-    color: "#e53e3e",
+    color: "#DC143C",
+    code: "Line 1",
     stations: ["Rithala", "Rohini West", "Rohini East", "Pitam Pura", "Kohat Enclave", 
                "Netaji Subhash Place", "Keshav Puram", "Kanhaiya Nagar", "Inderlok", 
                "Shastri Nagar", "Pratap Nagar", "Pulbangash", "Tis Hazari", "Kashmere Gate",
                "Shastri Park", "Seelampur", "Welcome", "Shahdara", "Mansarovar Park", 
-               "Jhilmil", "Dilshad Garden"]
+               "Jhilmil", "Dilshad Garden"],
+    length: "25.09 km",
+    totalStations: 21
   },
   "Yellow Line": {
-    color: "#ecc94b",
+    color: "#FFD700",
+    code: "Line 2",
     stations: ["Jahangirpuri", "Adarsh Nagar", "Azadpur", "Model Town", "GTB Nagar", 
-               "Vishwa Vidyalaya", "Vidhan Sabha", "Civil Lines", "Kashmere Gate", 
+               "Vishwa Vidyalaya", "Vidhan Sabha", "Civil Lines", "Kashmere Gate",
                "Chandni Chowk", "Chawri Bazar", "New Delhi", "Rajiv Chowk", "Patel Chowk",
                "Central Secretariat", "Udyog Bhawan", "Lok Kalyan Marg", "Jor Bagh", 
                "INA", "AIIMS", "Green Park", "Hauz Khas", "Malviya Nagar", "Saket",
                "Qutab Minar", "Chhatarpur", "Sultanpur", "Ghitorni", "Arjan Garh",
-               "Guru Dronacharya", "Sikandarpur", "MG Road", "IFFCO Chowk", "HUDA City Centre"]
+               "Guru Dronacharya", "Sikandarpur", "MG Road", "IFFCO Chowk", "HUDA City Centre"],
+    length: "49.0 km",
+    totalStations: 34
   },
   "Blue Line": {
-    color: "#3182ce",
+    color: "#0000FF",
+    code: "Line 3 & 4",
     stations: ["Dwarka Sector 21", "Dwarka Sector 8", "Dwarka Sector 9", "Dwarka Sector 10",
                "Dwarka Sector 11", "Dwarka Sector 12", "Dwarka Sector 13", "Dwarka Sector 14",
                "Dwarka", "Dwarka Mor", "Nawada", "Uttam Nagar West", "Uttam Nagar East",
@@ -48,15 +87,41 @@ export const metroLines = {
                "Shadipur", "Patel Nagar", "Rajendra Place", "Karol Bagh", "Jhandewalan",
                "New Delhi", "Chawri Bazar", "Lal Quila", "Jama Masjid", "Delhi Gate",
                "ITO", "Mandi House", "Barakhamba Road", "Rajiv Chowk", "Ramakrishna Ashram Marg",
-               "Jhandewalan", "Karol Bagh", "Rajendra Place", "Patel Nagar", "Shadipur",
-               "Kirti Nagar", "Moti Nagar", "Ramesh Nagar", "Rajouri Garden"]
+               "Pragati Maidan", "Akshardham", "Mayur Vihar-I", "Mayur Vihar Extension",
+               "New Ashok Nagar", "Noida Sector 15", "Noida Sector 16", "Noida Sector 18",
+               "Botanical Garden", "Golf Course", "Noida City Centre"],
+    length: "65.1 km", 
+    totalStations: 50
   },
   "Green Line": {
-    color: "#38a169",
+    color: "#00FF00",
+    code: "Line 5",
     stations: ["Brigadier Hoshiar Singh", "Bahadurgarh City", "Shakurpur", "Nangloi",
-               "Nangloi Railway Station", "Rajdhani Park", "Mundka", "Mundka Industrial Area",
-               "Ghevra Metro Station", "Tikri Kalan", "Tikri Border", "Pandit Shree Ram Sharma",
-               "Bahadurgarh City", "Brigadier Hoshiar Singh"]
+               "Nangloi Railway Station", "Rajdhani Park", "Mundka", "Mundka Industrial Area"],
+    length: "24.82 km",
+    totalStations: 8
+  },
+  "Violet Line": {
+    color: "#8A2BE2",
+    code: "Line 6",
+    stations: ["Escorts Mujesar", "Raja Nahar Singh", "Ballabhgarh", "Mohan Estate",
+               "Tughlakabad Station", "Sarita Vihar", "Jasola Apollo", "Okhla NSIC",
+               "Kalkaji Mandir", "Nehru Place", "Kailash Colony", "Moolchand", "Lajpat Nagar",
+               "Jangpura", "Khan Market", "JLN Stadium", "Central Secretariat"],
+    length: "38.99 km",
+    totalStations: 17
+  },
+  "Pink Line": {
+    color: "#FFC0CB",
+    code: "Line 7",
+    stations: ["Majlis Park", "Azadpur", "Shalimar Bagh", "Netaji Subhash Place", 
+               "Shakurpur", "Punjabi Bagh West", "ESI-Basaidarapur", "Rajouri Garden",
+               "Mayapuri", "Naraina Vihar", "Delhi Cantonment", "Durgabai Deshmukh South Campus",
+               "Sir Vishveshwaraiah Moti Bagh", "Bhikaji Cama Place", "Sarojini Nagar",
+               "Dilli Haat-INA", "South Extension", "Lajpat Nagar", "Vinobapuri", 
+               "Ashram", "Sarai Kale Khan", "Hazrat Nizamuddin", "Mayur Vihar Pocket-1"],
+    length: "58.59 km",
+    totalStations: 23
   }
 };
 
