@@ -176,6 +176,12 @@ const JourneyPlanner = () => {
                           Fewest Transfers (Minimize Changes)
                         </div>
                       </SelectItem>
+                      <SelectItem value="combined">
+                        <div className="flex items-center">
+                          <Zap className="w-4 h-4 mr-2" />
+                          Best Overall (Time + Fare Optimized)
+                        </div>
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
