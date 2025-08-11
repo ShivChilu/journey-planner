@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import JourneyPlanner from "./components/JourneyPlanner";
+import MetroMap from "./components/MetroMap";
 import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
 
@@ -11,6 +12,7 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       <Hero />
       <JourneyPlanner />
+      <MetroMap />
       <Footer />
     </div>
   );
